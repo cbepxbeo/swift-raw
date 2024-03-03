@@ -20,6 +20,8 @@
  */
 
 extension Byte {
+    ///Minimum possible value represented by one byte
     public static var zero: Byte { .init(uInt: 0) }
+    ///Maximum possible value represented by one byte
     public static var max: Byte { .init(uInt: 255) }
 }
