@@ -19,4 +19,9 @@
  
  */
 
-extension Bit {}
+extension Bit {
+    public enum Option {
+        case null
+        case unit
+    }
+}
