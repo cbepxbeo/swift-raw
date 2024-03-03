@@ -19,4 +19,36 @@
  
  */
 
-extension Byte {}
+extension Byte {
+    public enum Number {
+        case n1
+        case n2
+        case n3
+        case n4
+        case n5
+        case n6
+        case n7
+        case n8
+        
+        var offset: Int {
+            switch self {
+            case .n1:
+                7
+            case .n2:
+                6
+            case .n3:
+                5
+            case .n4:
+                4
+            case .n5:
+                3
+            case .n6:
+                2
+            case .n7:
+                1
+            case .n8:
+                0
+            }
+        }
+    }
+}
