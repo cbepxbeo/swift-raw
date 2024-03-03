@@ -19,4 +19,14 @@
  
  */
 
-extension Byte: ExpressibleByIntegerLiteral {}
+extension Byte: ExpressibleByIntegerLiteral {
+    public init(integerLiteral value: IntegerLiteralType) {
+        if value > 255 {
+            fatalError("Not enough bits to represent the passed value")
+        }
+        if value < 0 {
+            fatalError("Negative value is not representable")
+        }
+        self.rawValue = .init(value)
+    }
+}
