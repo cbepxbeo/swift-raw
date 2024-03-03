@@ -19,4 +19,7 @@
  
  */
 
-extension Byte {}
+extension Byte {
+    public static var zero: Byte { .init(uInt: 0) }
+    public static var max: Byte { .init(uInt: 255) }
+}
