@@ -19,4 +19,12 @@
  
  */
 
-extension Byte {}
+extension Byte {
+    public mutating func set(bit: Bit, number: Byte.Number){
+        self.rawValue = if bit.rawValue {
+            self.rawValue | 1 << number.offset
+        } else {
+            self.rawValue & (254 << number.offset | 255 >> (8 - number.offset))
+        }
+    }
+}
