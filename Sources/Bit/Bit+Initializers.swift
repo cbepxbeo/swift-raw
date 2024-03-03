@@ -19,4 +19,13 @@
  
  */
 
-extension Bit {}
+extension Bit {
+    public init(_ value: Bit.Option){
+        self.rawValue = switch value {
+        case .null:
+            false
+        case .unit:
+            true
+        }
+    }
+}
