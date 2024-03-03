@@ -19,4 +19,6 @@
  
  */
 
-public struct Bit {}
+public struct Bit {
+    let rawValue: Bool
+}
