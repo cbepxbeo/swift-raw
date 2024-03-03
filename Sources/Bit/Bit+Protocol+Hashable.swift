@@ -19,4 +19,8 @@
  
  */
 
-extension Bit: Hashable {}
+extension Bit: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        self.rawValue.hash(into: &hasher)
+    }
+}
