@@ -19,4 +19,8 @@
  
  */
 
-extension Byte: Equatable {}
+extension Byte: Equatable {
+    public static func == (lhs: Byte, rhs: Byte) -> Bool {
+        lhs.rawValue == rhs.rawValue
+    }
+}
