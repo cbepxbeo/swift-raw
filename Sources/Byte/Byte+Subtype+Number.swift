@@ -20,14 +20,23 @@
  */
 
 extension Byte {
+    ///Sequence number of a bit inside a byte from right to left
     public enum Number {
+        ///First bit from left
         case n1
+        //Second bit from left
         case n2
+        ///Third bit from left
         case n3
+        ///Fourth bit from left
         case n4
+        ///Tifth bit from left
         case n5
+        ///Sixth bit from left
         case n6
+        ///Seventh bit from left
         case n7
+        ///Eighth bit from left
         case n8
         
         var offset: Int {
