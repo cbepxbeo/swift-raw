@@ -19,4 +19,7 @@
  
  */
 
-extension Bit {}
+extension Bit {
+    static let null: Bit = .init(.null)
+    static let unit: Bit = .init(.unit)
+}
