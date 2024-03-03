@@ -12,13 +12,15 @@
  |  See the License for the specific language governing permissions and
  |  limitations under the License.
  |---------------------------------------------------------------------------------------
- |  File: Bit.swift
+ |  File: Bit+Method+Toggle.swift
  |  Created by: Egor Boyko
- |  Date: March 2nd, 2024
+ |  Date: March 3rd, 2024
  |---------------------------------------------------------------------------------------
  
  */
 
-public struct Bit {
-    internal(set) public var rawValue: Bool
+extension Bit {
+    public mutating func toggle() {
+        self.rawValue.toggle()
+    }
 }
