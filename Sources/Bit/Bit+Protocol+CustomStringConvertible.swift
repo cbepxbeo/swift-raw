@@ -19,4 +19,8 @@
  
  */
 
-extension Bit: CustomStringConvertible {}
+extension Bit: CustomStringConvertible {
+    public var description: String {
+        "Bit: " + (self.rawValue ? "1" : "0")
+    }
+}
