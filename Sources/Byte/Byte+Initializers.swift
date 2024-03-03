@@ -19,4 +19,20 @@
  
  */
 
-extension Byte {}
+extension Byte {
+    public init(uInt input: UInt8){
+        self.rawValue = input
+    }
+    public init(bits: (Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit)){
+        var byte: Byte = .zero
+        byte.set(bit: bits.0, number: .n1)
+        byte.set(bit: bits.1, number: .n2)
+        byte.set(bit: bits.2, number: .n3)
+        byte.set(bit: bits.3, number: .n4)
+        byte.set(bit: bits.4, number: .n5)
+        byte.set(bit: bits.5, number: .n6)
+        byte.set(bit: bits.6, number: .n7)
+        byte.set(bit: bits.7, number: .n8)
+        self = byte
+    }
+}
