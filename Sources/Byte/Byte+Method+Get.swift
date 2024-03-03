@@ -19,4 +19,13 @@
  
  */
 
-extension Byte {}
+extension Byte {
+    public func get(number: Byte.Number) -> Bit{
+        switch number {
+        case .n1:
+            Bit(rawValue: (self.rawValue >> 7) == 1)
+        default:
+            Bit(rawValue: ((self.rawValue << (7 - number.offset)) >> 7) == 1)
+        }
+    }
+}
