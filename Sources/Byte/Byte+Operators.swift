@@ -19,4 +19,23 @@
  
  */
 
-extension Byte {}
+extension Byte {
+    public static func | (lhs: Byte, rhs: Byte) -> Byte {
+        .init(uInt: lhs.rawValue | rhs.rawValue)
+    }
+    public static func & (lhs: Byte, rhs: Byte) -> Byte {
+        .init(uInt: lhs.rawValue & rhs.rawValue)
+    }
+    public static func ^ (lhs: Byte, rhs: Byte) -> Byte {
+        .init(uInt: lhs.rawValue ^ rhs.rawValue)
+    }
+    public static func << (lhs: Byte, rhs: Int) -> Byte {
+        .init(uInt: lhs.rawValue << rhs)
+    }
+    public static func >> (lhs: Byte, rhs: Int) -> Byte {
+        .init(uInt: lhs.rawValue >> rhs)
+    }
+    public static prefix func ~(lhs: inout Byte) -> Byte {
+        .init(uInt: ~lhs.rawValue)
+    }
+}
