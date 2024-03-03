@@ -19,4 +19,8 @@
  
  */
 
-extension Bit: CustomDebugStringConvertible {}
+extension Bit: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        self.description
+    }
+}
