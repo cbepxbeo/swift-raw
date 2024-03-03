@@ -19,4 +19,14 @@
  
  */
 
-extension Bit: ExpressibleByIntegerLiteral {}
+extension Bit: ExpressibleByIntegerLiteral {
+    public init(integerLiteral value: IntegerLiteralType) {
+        if value > 1 {
+            fatalError("A bit cannot be represented by a number greater than one")
+        }
+        if value < 0 {
+            fatalError("bit cannot be represented by a negative number")
+        }
+        self.rawValue = value == 1
+    }
+}
