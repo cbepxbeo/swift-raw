@@ -19,4 +19,28 @@
  
  */
 
-extension Byte: CustomStringConvertible {}
+extension Byte: CustomStringConvertible {
+    public var description: String {
+        let string = String(self.rawValue, radix: 2)
+        let zeroView = "0"
+        let strings = switch string.count {
+        case 1:
+            Array<String>.init(repeating: zeroView, count: 7) + [string]
+        case 2:
+            Array<String>.init(repeating: zeroView, count: 6) + string.map { String($0) }
+        case 3:
+            Array<String>.init(repeating: zeroView, count: 5) + string.map { String($0) }
+        case 4:
+            Array<String>.init(repeating: zeroView, count: 4) + string.map { String($0) }
+        case 5:
+            Array<String>.init(repeating: zeroView, count: 3) + string.map { String($0) }
+        case 6:
+            Array<String>.init(repeating: zeroView, count: 2) + string.map { String($0) }
+        case 7:
+            [zeroView] + string.map { String($0) }
+        default:
+            string.map { String($0) }
+        }
+        return "Byte: [" + strings.joined(separator: "|") + "]"
+    }
+}
