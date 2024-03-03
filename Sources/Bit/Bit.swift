@@ -20,5 +20,5 @@
  */
 
 public struct Bit {
-    let rawValue: Bool
+    internal(set) public var rawValue: Bool
 }
