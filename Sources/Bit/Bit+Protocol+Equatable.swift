@@ -19,4 +19,8 @@
  
  */
 
-extension Bit: Equatable {}
+extension Bit: Equatable {
+    public static func == (lhs: Bit, rhs: Bit) -> Bool {
+        lhs.rawValue == rhs.rawValue
+    }
+}
