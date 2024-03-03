@@ -19,4 +19,6 @@
  
  */
 
-public struct Byte {}
+public struct Byte {
+    var rawValue: UInt8
+}
