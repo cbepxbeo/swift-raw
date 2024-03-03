@@ -19,4 +19,8 @@
  
  */
 
-extension Bit: ExpressibleByBooleanLiteral {}
+extension Bit: ExpressibleByBooleanLiteral {
+    public init(booleanLiteral value: BooleanLiteralType) {
+        self.rawValue = value
+    }
+}
