@@ -20,6 +20,8 @@
  */
 
 extension Bit {
+    ///Containing the value of zero
     static let null: Bit = .init(.null)
+    ///Containing value by unit
     static let unit: Bit = .init(.unit)
 }
