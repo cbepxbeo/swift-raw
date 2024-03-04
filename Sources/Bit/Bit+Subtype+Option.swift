@@ -20,8 +20,11 @@
  */
 
 extension Bit {
+    ///Representation of a zero or one bit value
     public enum Option {
+        ///Null value
         case null
+        ///Unit value
         case unit
     }
 }
