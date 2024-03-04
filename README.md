@@ -1,5 +1,5 @@
 # SwiftRaw
-The package is a wrapper over UInt for more convenient work with bits.   
+The package is a wrapper over UInt8 for more convenient work with bits.   
 There are both safer ways to create values, as well as classic ones based on integer literals.   
 Using this solution you can easily and safely set and retrieve the specific bit of each byte without using bitwise operators
 
