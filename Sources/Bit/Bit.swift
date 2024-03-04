@@ -19,6 +19,39 @@
  
  */
 
+///A type representing a single bit
+///
+///Create a bit based on options
+///
+///     let nullBit = Bit(.null)
+///     print(nullBit)
+///     //print - Bit: 0
+///
+///     let unitBit = Bit(.unit)
+///     print(unitBit)
+///    //print - Bit: 1
+///
+///Creating a bit from a Boolean value
+///
+///     let nullBit: Bit = false
+///     print(nullBit)
+///     //print - Bit: 0
+///
+///     let unitBit: Bit = true
+///     print(unitBit)
+///    //print - Bit: 1
+///
+///Creating using decimal notation (possible overflow)
+///
+///     let nullBit: Bit = 0
+///     print(nullBit)
+///     //print - Bit: 0
+///
+///     let unitBit: Bit = 1
+///     print(unitBit)
+///    //print - Bit: 1
+///    
+/// - Note: Keep in mind that a bit is a representation of a type and is used as a means of manipulating bytes. Due to memory alignment, it will occupy one byte of memory regardless of its value.
 public struct Bit {
-    let rawValue: Bool
+    internal(set) public var rawValue: Bool
 }

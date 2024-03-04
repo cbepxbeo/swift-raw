@@ -20,9 +20,25 @@
  */
 
 extension Byte {
+    ///The fastest (not resource-intensive) and safest way to create based on the UInt8 type
+    ///
+    ///     let byte = Byte(uInt: 255)
+    ///
+    /// - Parameter uInt: Byte represented by type int
     public init(uInt input: UInt8){
         self.rawValue = input
     }
+    ///Creation using bits
+    ///
+    ///Possible bit overflow
+    ///
+    ///     let byte = Byte(bits: (0,0,0,0,0,0,0,0))
+    ///
+    ///Without potential overflow
+    ///
+    ///      let byte = Byte(bits: (false, false, false, false, false, false, false, false))
+    /// - Parameter bits: Bytes
+    /// - Note: This method of creating a more resource-intensive alternative to creating a byte.
     public init(bits: (Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit)){
         var byte: Byte = .zero
         byte.set(bit: bits.0, number: .n1)

@@ -12,16 +12,30 @@
  |  See the License for the specific language governing permissions and
  |  limitations under the License.
  |---------------------------------------------------------------------------------------
- |  File: Bit+Static+Properties.swift
+ |  File: Bit+Method+Toggle.swift
  |  Created by: Egor Boyko
- |  Date: March 2nd, 2024
+ |  Date: March 3rd, 2024
  |---------------------------------------------------------------------------------------
  
  */
 
 extension Bit {
-    ///Containing the value of zero
-    static let null: Bit = .init(.null)
-    ///Containing value by unit
-    static let unit: Bit = .init(.unit)
+    ///Reverses the value
+    ///
+    ///     let bit = Bit(.null)
+    ///     print(bit)
+    ///     //print - Bit: 0
+    ///
+    ///     byte.toggle()
+    ///     print(bit)
+    ///     //print - Bit: 1
+    ///
+    ///     byte.toggle()
+    ///     print(bit)
+    ///     //print - Bit: 0
+    ///
+    ///
+    public mutating func toggle() {
+        self.rawValue.toggle()
+    }
 }

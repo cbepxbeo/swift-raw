@@ -20,6 +20,22 @@
  */
 
 extension Byte {
+    ///Receiving a bit by sequence number from left to right
+    ///
+    ///     let byte: Byte = 0xDC //220
+    ///     print(byte)
+    ///     //print - Byte: [1|1|0|1|1|1|0|0]
+    ///
+    ///     let bitN3 = byte.get(number: .n3)
+    ///     let bitN4 = byte.get(number: .n4)
+    ///
+    ///     print(bitN3)
+    ///     //print - Bit: 0
+    ///     print(bitN4)
+    ///     //print - Bit: 1
+    ///
+    /// - Parameter number: sequence number
+    /// - Returns: separate bit representation
     public func get(number: Byte.Number) -> Bit{
         switch number {
         case .n1:
