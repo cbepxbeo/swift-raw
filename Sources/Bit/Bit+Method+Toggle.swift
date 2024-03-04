@@ -20,6 +20,21 @@
  */
 
 extension Bit {
+    ///Reverses the value
+    ///
+    ///     let bit = Bit(.null)
+    ///     print(bit)
+    ///     //print - Bit: 0
+    ///
+    ///     byte.toggle()
+    ///     print(bit)
+    ///     //print - Bit: 1
+    ///
+    ///     byte.toggle()
+    ///     print(bit)
+    ///     //print - Bit: 0
+    ///
+    ///
     public mutating func toggle() {
         self.rawValue.toggle()
     }
