@@ -20,8 +20,19 @@
  */
 
 extension Bit {
-    public init(_ value: Bit.Option){
-        self.rawValue = switch value {
+    ///Create a bit based on options
+    ///
+    ///     let nullBit = Bit(.null)
+    ///     print(nullBit)
+    ///     //print - Bit: 0
+    ///
+    ///     let unitBit = Bit(.unit)
+    ///     print(unitBit)
+    ///    //print - Bit: 1
+    ///
+    /// - Parameter option: Representation of a zero or one bit value
+    public init(_ option: Bit.Option){
+        self.rawValue = switch option {
         case .null:
             false
         case .unit:
